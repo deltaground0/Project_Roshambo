@@ -79,23 +79,6 @@ function game() {
     }
 }
 
-/*function score(win) {
-    win = playRound();
-    let playerScore = 0;
-    let cpuScore = 0;
-    
-    if (win === true) {
-        playerScore++;
-        console.log(`Player Score: ${playerScore}\nComputer Score: ${cpuScore}`);
-    } else if(win === false) {
-        cpuScore++;
-        console.log(`Player Score: ${playerScore}\nComputer Score: ${cpuScore}`);
-    } else {
-        playerScore = playerScore + 0;
-        cpuScore = cpuScore + 0;
-        console.log(`Player Score: ${playerScore}\nComputer Score: ${cpuScore}`);
-    }
-    
-}*/
+
 
 game();
