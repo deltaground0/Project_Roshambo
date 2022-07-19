@@ -11,7 +11,7 @@ function getComputerChoice () {
     return choice;
 }
 
-function practice(playerSelection, computerSelection) {
+function playRound(playerSelection, computerSelection) {
     computerSelection = getComputerChoice();
     playerSelection = prompt("Choose your weapon: ");
     playerSelection = playerSelection.toLowerCase();
@@ -48,6 +48,11 @@ function practice(playerSelection, computerSelection) {
             break;
         default:
             console.log("What... what did you do? That wasn't one of the choices and you know it.");
-    }
-}
-practice();
+    };
+};
+
+function game() {
+    for (let i = 0; i < 5; i++) {
+        playRound();
+    };
+};
