@@ -1,3 +1,7 @@
+let playerScore = 0;
+let cpuScore = 0; 
+
+
 function getComputerChoice () {
     let choice = Math.floor(Math.random() * 3);
     
@@ -16,44 +20,44 @@ function playRound(playerSelection, computerSelection) {
     playerSelection = prompt("There are five rounds to this game of Rock, Paper, Scissors. Choose your weapon: ");
     playerSelection = playerSelection.toLowerCase();
     
-   
+    
     switch (playerSelection) {
         case "rock":
             if (computerSelection === "Scissors") {
                 console.log(`The computer chose ${computerSelection}.`);
-                return true;
+                return ++playerScore;
             } else if (computerSelection === "Paper") {
                 console.log(`The computer chose ${computerSelection}.`);
-                return false;
+                return ++cpuScore;
             } else {
                 console.log(`The computer chose ${computerSelection}.`);
-                return null;
+                return;
             };
             break;
 
         case "paper":
             if (computerSelection === "Rock") {
                 console.log(`The computer chose ${computerSelection}.`);
-                return true;
+                return ++playerScore;
             } else if (computerSelection === "Scissors") {
                 console.log(`The computer chose ${computerSelection}.`);
-                return false;
+                return ++cpuScore;
             } else {
                 console.log(`The computer chose ${computerSelection}.`);
-                return null;
+                return;
             };
             break;
 
         case "scissors":
             if (computerSelection === "Paper") {
                 console.log(`The computer chose ${computerSelection}.`);
-                return true;
+                return ++playerScore;
             } else if (computerSelection === "Rock") {
                 console.log(`The computer chose ${computerSelection}.`);
-                return false;
+                return ++cpuScore;
             } else {
                 console.log(`The computer chose ${computerSelection}.`);
-                return null;
+                return;
             };
             break;
         default:
@@ -62,10 +66,9 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function game() {
-    i = 0;
-    for (i = 0; i < 5; i++) { 
+    for (let i = 0; i < 5; i++) { 
         playRound();
-        score();
+        console.log(`Player Score: ${playerScore}\nComputer Score: ${cpuScore}`)
     }
     if (playerScore > cpuScore){
         console.log("YOU WON! YOU'RE AMAZING!");
@@ -76,7 +79,7 @@ function game() {
     }
 }
 
-function score(win) {
+/*function score(win) {
     win = playRound();
     let playerScore = 0;
     let cpuScore = 0;
@@ -93,6 +96,6 @@ function score(win) {
         console.log(`Player Score: ${playerScore}\nComputer Score: ${cpuScore}`);
     }
     
-}
+}*/
 
 game();
