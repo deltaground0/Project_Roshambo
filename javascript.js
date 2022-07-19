@@ -19,7 +19,7 @@ function practice(playerSelection, computerSelection) {
     switch (playerSelection) {
         case "rock":
             if (computerSelection === "Rock") {
-                console.log(`The computer chose ${computerSelection}.You tied. Not bad.`);
+                console.log(`The computer chose ${computerSelection}. You tied. Not bad.`);
             } else if (computerSelection === "Paper") {
                 console.log("I'm so sorry you lost. The computer chose ${computerSelection}. Try again though! Maybe you'll win.");
             } else {
@@ -29,7 +29,7 @@ function practice(playerSelection, computerSelection) {
 
         case "paper":
             if (computerSelection === "Paper") {
-                console.log(`The computer chose ${computerSelection}.You tied. Not bad.`);
+                console.log(`The computer chose ${computerSelection}. You tied. Not bad.`);
             } else if (computerSelection === "Scissors") {
                 console.log("I'm so sorry you lost. The computer chose ${computerSelection}. Try again though! Maybe you'll win.");
             } else {
@@ -39,7 +39,7 @@ function practice(playerSelection, computerSelection) {
 
         case "scissors":
             if (computerSelection === "Scissors") {
-                console.log(`The computer chose ${computerSelection}.You tied. Not bad.`);
+                console.log(`The computer chose ${computerSelection}. You tied. Not bad.`);
             } else if (computerSelection === "Rock") {
                 console.log("I'm so sorry you lost. The computer chose ${computerSelection}. Try again though! Maybe you'll win.");
             } else {
@@ -47,7 +47,7 @@ function practice(playerSelection, computerSelection) {
             };
             break;
         default:
-            console.log("What... what did you do?");
+            console.log("What... what did you do? That wasn't one of the choices and you know it.");
     }
 }
 practice();
